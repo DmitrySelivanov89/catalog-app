@@ -1,24 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Gallery from './components/Gallery/Gallery';
+
+import './App.scss';
+
+export interface ImageSchema { url: string; aspectRatio?: 'landscape' | 'portrait' }
 
 function App() {
+  const imagesSchema: ImageSchema[] = [
+    { url: 'https://source.unsplash.com/random' },
+    { url: 'https://source.unsplash.com/random' },
+    { url: 'https://source.unsplash.com/random', aspectRatio: 'portrait' },
+    { url: 'https://source.unsplash.com/random' },
+    { url: 'https://source.unsplash.com/random' },
+    { url: 'https://source.unsplash.com/random', aspectRatio: 'landscape' },
+    { url: 'https://source.unsplash.com/random' },
+    { url: 'https://source.unsplash.com/random' },
+  ]
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      <Gallery images={imagesSchema} />
     </div>
   );
 }
