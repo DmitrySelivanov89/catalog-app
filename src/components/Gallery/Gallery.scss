@@ -13,7 +13,7 @@
   .gallery__content {
     display: grid;
     grid-auto-flow: dense;
-    grid-template-columns: 136px;
+    grid-template-columns: repeat(2, 136px);
     grid-template-rows: 136px;
     gap: 8px;
 
@@ -36,7 +36,6 @@
   }
 
   .gallery__btn-panel {
-    padding: 16.5px 61.75px 16.5px 53.75px;
     margin-top: 18px;
 
     .btn-panel__btn {
@@ -47,7 +46,7 @@
       height: 50px;
       background-color: #fff;
       line-height: 17px;
-      border: none;
+      border: 1px solid #e4e7eb;
       cursor: pointer;
       font-size: 12px;
       font-family: 'Rubik', sans-serif;
@@ -64,3 +63,4 @@
     }
   }
 }
+

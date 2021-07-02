@@ -4,22 +4,54 @@ import { ImageSchema } from '../../App';
 
 import './Gallery.scss';
 
-export default class Gallery extends React.Component<{images: ImageSchema[]}> {
+export default class Gallery extends React.Component<
+  {
+    images: ImageSchema[];
+  },
+  {
+    images: ImageSchema[];
+  }
+> {
+  open = false;
 
-  imagesGrid = this.props.images.map((image, i) => {
-    return (
-      <div
-        className={
-          'content__image' +
-          (image.aspectRatio ? ' content__image--' + image.aspectRatio : '')
-        }
-        style={{
-          background: `url(${image.url}) no-repeat center/cover`,
-        }}
-        key={i}
-      ></div>
-    );
-  });
+  constructor(props: { images: ImageSchema[] }) {
+    super(props);
+
+    this.state = {
+      images: this.open ? props.images : props.images.slice(0, 5),
+    };
+  }
+
+  toggle = () => {
+    this.open = !this.open;
+    this.setState((state) => ({
+      images: this.open ? this.props.images : this.props.images.slice(0, 5),
+    }));
+
+    if (!this.open) {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth',
+      });
+    }
+  };
+
+  get imagesGrid() {
+    return this.state.images.map((image, i) => {
+      return (
+        <div
+          className={
+            'content__image' +
+            (image.aspectRatio ? ' content__image--' + image.aspectRatio : '')
+          }
+          style={{
+            background: `url(${image.url}) no-repeat center/cover`,
+          }}
+          key={i}
+        ></div>
+      );
+    });
+  }
 
   render() {
     return (
@@ -29,7 +61,7 @@ export default class Gallery extends React.Component<{images: ImageSchema[]}> {
         <div className='gallery__content'>{this.imagesGrid}</div>
 
         <div className='gallery__btn-panel'>
-          <button className='btn-panel__btn'>
+          <button className='btn-panel__btn' onClick={this.toggle}>
             <svg
               className='btn-icon'
               width='14'
