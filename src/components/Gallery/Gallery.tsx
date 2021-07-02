@@ -49,7 +49,7 @@ export default class Gallery extends React.Component<
           }}
           key={i}
         >
-          <div className="image__title">{image.title}</div>
+          <div className='image__title'>{image.title}</div>
         </div>
       );
     });
@@ -72,9 +72,9 @@ export default class Gallery extends React.Component<
               fill='none'
               xmlns='http://www.w3.org/2000/svg'
             >
-              <rect x='0.75' y='3.5' width='14' height='2' fill='#E54137' />
-              <rect x='0.75' y='7.5' width='14' height='2' fill='#E54137' />
-              <rect x='0.75' y='11.5' width='14' height='2' fill='#E54137' />
+              <rect x='0.75' y='3.5' />
+              <rect x='0.75' y='7.5' />
+              <rect x='0.75' y='11.5' />
             </svg>
             Смотреть весь каталог
           </button>

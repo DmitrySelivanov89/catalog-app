@@ -10,16 +10,16 @@ export interface ImageSchema {
 
 function App() {
   const imagesSchema: ImageSchema[] = [
-    { url: 'https://source.unsplash.com/random', title: 'Вилочные погрузчики'},
-    { url: 'https://source.unsplash.com/random', title: 'Вилочные погрузчики' },
-    { url: 'https://source.unsplash.com/random', title: 'Вилочные погрузчики', aspectRatio: 'portrait' },
-    { url: 'https://source.unsplash.com/random', title: 'Вилочные погрузчики' },
-    { url: 'https://source.unsplash.com/random', title: 'Вилочные погрузчики' },
-    { url: 'https://source.unsplash.com/random', title: 'Вилочные погрузчики', aspectRatio: 'landscape' },
-    { url: 'https://source.unsplash.com/random', title: 'Вилочные погрузчики' },
-    { url: 'https://source.unsplash.com/random', title: 'Вилочные погрузчики' },
-    { url: 'https://source.unsplash.com/random', title: 'Вилочные погрузчики' },
-    { url: 'https://source.unsplash.com/random', title: 'Вилочные погрузчики' },
+    { url: 'https://source.unsplash.com/random', title: 'Галерея'},
+    { url: 'https://source.unsplash.com/random', title: 'Галерея' },
+    { url: 'https://source.unsplash.com/random', title: 'Галерея', aspectRatio: 'portrait' },
+    { url: 'https://source.unsplash.com/random', title: 'Галерея' },
+    { url: 'https://source.unsplash.com/random', title: 'Галерея' },
+    { url: 'https://source.unsplash.com/random', title: 'Галерея', aspectRatio: 'landscape' },
+    { url: 'https://source.unsplash.com/random', title: 'Галерея' },
+    { url: 'https://source.unsplash.com/random', title: 'Галерея' },
+    { url: 'https://source.unsplash.com/random', title: 'Галерея' },
+    { url: 'https://source.unsplash.com/random', title: 'Галерея' },
   ];
 
   return (

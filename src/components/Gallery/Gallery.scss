@@ -16,6 +16,7 @@
     grid-template-columns: repeat(2, 136px);
     grid-template-rows: 136px;
     gap: 8px;
+    place-content: center;
 
     .content__image {
       position: relative;
@@ -30,14 +31,13 @@
         align-items: center;
         position: absolute;
         width: 100%;
-
         bottom: 0;
-        height: 57px;
+        height: 39px;
         font-family: 'Rubik';
-        font-size: 18px;
-        font-weight: 700;
-        line-height: 25px;
+        font-size: 15px;
+        font-weight: 500;
         background: rgba(255, 255, 255, 0.9);
+        line-height: 23px;
       }
 
       &--landscape {
@@ -66,16 +66,25 @@
       border: 1px solid #e4e7eb;
       cursor: pointer;
       font-size: 12px;
-      font-family: 'Rubik', sans-serif;
+      font-family: 'Rubik';
       color: #e54137;
       font-weight: 500;
 
       .btn-icon {
         margin-right: 13.5px;
+        fill: #e54137;
+
+        rect {
+          width: 14px;
+          height: 2px;
+        }
       }
 
       &:hover {
         color: #ebeced;
+        .btn-icon {
+          fill: #ebeced;
+        }
       }
     }
   }
@@ -98,6 +107,13 @@
       .content__image {
         min-height: 270px;
         min-width: 270px;
+
+        .image__title {
+          line-height: 23px;
+          font-size: 18px;
+          font-weight: 500;
+          line-height: 25px;
+        }
 
         &--landscape {
           grid-column: span 2;
@@ -126,3 +142,28 @@
     }
   }
 }
+
+// .gallery .gallery__btn-panel .btn-panel__btn:hover {
+//   color: red;
+// }
+
+// .gallery {
+//   .gallery__btn-panel {
+
+//     .btn-panel__btn {
+//       color: green;
+//     }
+
+//     &:hover .btn-panel__btn {
+//       color: blue;
+//     }
+
+//     &:active .btn-panel__btn {
+//       color: cyan;
+//     }
+//   }
+// }
+
+// // .gallery .gallery__btn-panel:hover .btn-panel__btn {
+// //   color: blue;
+// // }
