@@ -4,19 +4,22 @@ import './App.scss';
 
 export interface ImageSchema {
   url: string;
+  title: string;
   aspectRatio?: 'landscape' | 'portrait';
 }
 
 function App() {
   const imagesSchema: ImageSchema[] = [
-    { url: 'https://source.unsplash.com/random' },
-    { url: 'https://source.unsplash.com/random' },
-    { url: 'https://source.unsplash.com/random', aspectRatio: 'portrait' },
-    { url: 'https://source.unsplash.com/random' },
-    { url: 'https://source.unsplash.com/random' },
-    { url: 'https://source.unsplash.com/random', aspectRatio: 'landscape' },
-    { url: 'https://source.unsplash.com/random' },
-    { url: 'https://source.unsplash.com/random' },
+    { url: 'https://source.unsplash.com/random', title: 'Вилочные погрузчики'},
+    { url: 'https://source.unsplash.com/random', title: 'Вилочные погрузчики' },
+    { url: 'https://source.unsplash.com/random', title: 'Вилочные погрузчики', aspectRatio: 'portrait' },
+    { url: 'https://source.unsplash.com/random', title: 'Вилочные погрузчики' },
+    { url: 'https://source.unsplash.com/random', title: 'Вилочные погрузчики' },
+    { url: 'https://source.unsplash.com/random', title: 'Вилочные погрузчики', aspectRatio: 'landscape' },
+    { url: 'https://source.unsplash.com/random', title: 'Вилочные погрузчики' },
+    { url: 'https://source.unsplash.com/random', title: 'Вилочные погрузчики' },
+    { url: 'https://source.unsplash.com/random', title: 'Вилочные погрузчики' },
+    { url: 'https://source.unsplash.com/random', title: 'Вилочные погрузчики' },
   ];
 
   return (

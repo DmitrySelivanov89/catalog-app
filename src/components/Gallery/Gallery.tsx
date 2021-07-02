@@ -48,7 +48,9 @@ export default class Gallery extends React.Component<
             background: `url(${image.url}) no-repeat center/cover`,
           }}
           key={i}
-        ></div>
+        >
+          <div className="image__title">{image.title}</div>
+        </div>
       );
     });
   }
